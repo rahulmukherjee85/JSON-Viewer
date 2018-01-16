@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+     <title>Editor</title>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <meta http-equiv="cache-control" content="public,max-age=2592000">
+      <link rel="stylesheet" type="text/css" href="./dist/jsoneditor.min.css">
+      <link rel="stylesheet" type="text/css" href="./dist/bootstrap/css/bootstrap.min.css">
+      <link rel="icon" href="./dist/json.png">
+      <link rel="shortcut icon" href="./dist/json.png">
+      <style type="text/css">
+         code {
+           background-color: #f5f5f5;
+         }
+         #jsoneditor {
+           width: 800px;
+           height: 500px;
+         }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4">
+         <a class="navbar-brand" href="/"><strong>{JSON}</strong>Editor</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+
+               <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);" onclick="return editor.setMode('code');">Code Editor</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);" onclick="return editor.setMode('form');">Form</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);" onclick="return editor.setMode('tree');">Tree</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);" onclick="return editor.setMode('view');">View</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0);" onclick="return editor.setMode('text');">Text (Raw)</a>
+               </li>
+
+            </ul>
+
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row">
+
+            <div class="col-8" id="jsoneditor"></div>
+            <div class="col-4">
+              <div class="alert alert-primary">
+                <div>
+                  <strong>Load file from disk : </strong> <br/>
+                  <input class="btn btn-outline-primary" type="file" id="loadDocument" value="Load"/>
+                </div>
+                <p>&nbsp</p>
+                <div>
+                  <strong>Save loaded JSON as File : </strong> &nbsp; &nbsp;
+                  <input  class="btn btn-primary" type="button" id="saveDocument" value="Save" />
+                  <p>&nbsp;</p>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+         </div>
+      </div>
+      <script src="./dist/jsoneditor.min.js"></script>
+      <script src="./dist/FileSaver.min.js"></script>
+      <script src="./dist/setting.min.js"></script>
+      <footer class="footer" style="color:#b4b4b4;text-align: center;">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <a style="color:#b4b4b4;" href="https://github.com/rahulmukherjee85/JSON-Viewer">Open source</a> tool to Create, Update, Delete and Format JSON Object using Browser based tool.
+      </footer>
+
+   </body>
+</html>
